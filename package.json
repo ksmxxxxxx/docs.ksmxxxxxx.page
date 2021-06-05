@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/ksmxxxxxx/blog.ksmxxxxxx.page#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "eslint": "^7.27.0",
+    "eslint-config-standard": "^16.0.3",
+    "pug": "^3.0.2"
   }
 }
