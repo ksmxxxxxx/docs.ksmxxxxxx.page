@@ -1,0 +1,15 @@
+---
+layout: layouts/base
+---
+
+section
+  h2 Recently
+  ul
+    each item in collections.post.reverse()
+      li
+        a(href=item.url)
+          = item.data.title
+        time(datetime=filters.htmlDateString(item.date))
+          = filters.readableDate(item.date)
+
+include aboutme.pug

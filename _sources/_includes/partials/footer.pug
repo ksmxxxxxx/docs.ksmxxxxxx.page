@@ -1,0 +1,6 @@
+footer(role='contentinfo')
+  - const year = new Date().getFullYear()
+  p.copyright &copy;
+    span.year=year
+    a.name(href=site.author.github) #{site.author.name}
+
