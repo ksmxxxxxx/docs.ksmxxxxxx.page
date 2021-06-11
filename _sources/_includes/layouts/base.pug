@@ -1,15 +1,11 @@
 doctype html
 html(lang='ja')
   head
-    meta(charset='utf-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1')
-    meta(name='description' content=site.description)
-    meta(name='author' content=site.author.name)
-    title= site.title
+    include ../partials/meta.pug
   body
     include ../partials/header.pug
 
-    | !{content}
+    main(role='main')
+      | !{content}
 
     include ../partials/footer.pug
-

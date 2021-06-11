@@ -1,0 +1,12 @@
+---
+layout: layouts/base
+---
+
+section
+  header
+    h1=title
+    time(datetime=filters.htmlDateString(page.date))
+      = filters.readableDate(page.date)
+
+  article
+    | !{content}
