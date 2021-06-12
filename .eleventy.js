@@ -9,8 +9,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginSass, {
     autoprefixer: true,
     sourcemap: false,
-    watch: ['_sources/sass/*.{sass, scss}'],
-    outputDir: '_site/css'
+    watch: ['_sources/stylesheets/*.{sass, scss}'],
+    outputDir: '_site/stylesheets'
   })
   eleventyConfig.setPugOptions({
     filters: global.filters
