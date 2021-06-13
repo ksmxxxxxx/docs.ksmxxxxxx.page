@@ -1,0 +1,34 @@
+.aboutme
+  dl
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    align-items: center
+    padding-bottom: 2rem
+  figure
+    height: 10rem
+    img
+      display: block
+      margin-right: auto
+      margin-left: auto
+      height: 100%
+      border-radius: 50%
+
+  @media (min-width: $tablet_and_laptop)
+    display: flex
+    flex-direction: row-reverse
+    justify-content: flex-end
+    align-items: center
+    figure
+      padding-left: 1rem
+    dl
+      flex-direction: row
+      flex-wrap: nowrap
+      align-items: center
+      padding-bottom: 1rem
+      dt
+        width: 4rem
+        padding-right: 1rem
+        text-align: right
+    p
+      text-align: center
