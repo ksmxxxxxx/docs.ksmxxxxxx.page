@@ -1,10 +1,17 @@
 const { Settings, DateTime } = require('luxon')
+const pluginSass = require('eleventy-plugin-sass')
 const pug = require('pug')
 
 module.exports = function (eleventyConfig) {
   global.filters = eleventyConfig.javascriptFunctions
   eleventyConfig.addPassthroughCopy('_sources/images')
   eleventyConfig.setLibrary('pug', pug)
+  eleventyConfig.addPlugin(pluginSass, {
+    autoprefixer: true,
+    sourcemap: false,
+    watch: ['_sources/stylesheets/*.{sass, scss}'],
+    outputDir: '_site/stylesheets'
+  })
   eleventyConfig.setPugOptions({
     filters: global.filters
   })

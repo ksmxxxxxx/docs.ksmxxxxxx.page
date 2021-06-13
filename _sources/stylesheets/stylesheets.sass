@@ -1,0 +1,44 @@
+@charset 'utf-8'
+@import 'override_bulma'
+@import '../../node_modules/bulma/bulma'
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap')
+
+@import 'extend'
+
+@import 'root_elements'
+@import 'root_header'
+@import 'root_footer'
+@import 'recently_posts_list'
+@import 'aboutme'
+
+.page
+  section
+    padding-bottom: 3rem
+  section:last-child
+    padding-bottom: 0
+  h2
+    @extend %title-serif
+    text-align: center
+    @media (min-width: $tablet_and_laptop)
+      text-align: left
+
+.post
+  header
+    border-bottom: 4px solid $color-yellow
+    margin-bottom: 3rem
+    h1
+      @extend %title-serif
+    time
+      display: block
+      padding-bottom: .5rem
+      text-align: right
+      font-size: $size-7
+      color: $color-very-dark-grayish-blue
+
+@media (min-width: $tablet_and_laptop)
+  .page, .post
+    max-width: 48rem
+    margin-right: auto
+    margin-left: auto

@@ -2,14 +2,18 @@
 layout: layouts/base
 ---
 
-section
-  h2 Recently
-  ul
-    each item in collections.post.reverse()
-      li
-        a(href=item.url)
-          = item.data.title
-        time(datetime=filters.htmlDateString(item.date))
-          = filters.readableDate(item.date)
+section.page
+  section
+    h2 Recently
+    ul.recently-posts-list
+      each item in collections.post.reverse()
+        li
+          time(datetime=filters.htmlDateString(item.date))
+            = filters.readableDate(item.date)
+          a(href=item.url)
+            = item.data.title
 
-include aboutme.pug
+  section
+    h2 Adout me
+    include aboutme.pug
+
