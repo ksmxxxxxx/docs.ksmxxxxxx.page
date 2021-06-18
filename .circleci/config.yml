@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  lint:
+  deploy:
     docker:
       - image: circleci/node:12
     steps:
@@ -9,9 +9,12 @@ jobs:
           name: install
           command: npm install
       - run:
-          name: lint
-          command: npm run lint
+          name: build
+          command: npm run build
+      - run:
+          name: deploy
+          command: npx netlify deploy -p -d _site -a ${NETLIFY_AUTH_TOKEN} -s ${NETLIFY_SITE_ID}
 workflows:
-  lint:
+  test:
     jobs:
-      - lint
+      - deploy
