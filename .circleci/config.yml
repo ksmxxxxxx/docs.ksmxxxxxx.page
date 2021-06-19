@@ -1,5 +1,32 @@
 version: 2.1
 jobs:
+  npm_package_install:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - node-v1-{{ .Branch }}-
+            - node-v1-
+      - run:
+          name: install
+          command: npm install
+      - save_cache:
+          paths:
+            - ~/usr/local/lib/node_modules
+          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+  eleventy:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout
+      - restore_cache: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run:
+        name: build
+        command: npm run build
+
   deploy:
     docker:
       - image: circleci/node:12
@@ -14,7 +41,12 @@ jobs:
       - run:
           name: deploy
           command: npx netlify deploy -p -d _site -a ${NETLIFY_AUTH_TOKEN} -s ${NETLIFY_SITE_ID}
+
 workflows:
+  version: 2.1
   test:
     jobs:
-      - deploy
+      - npm_package_install
+      - eleventy
+          requires:
+            - npm_package_install
