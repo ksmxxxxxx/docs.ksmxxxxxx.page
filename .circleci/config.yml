@@ -24,8 +24,8 @@ jobs:
       - checkout
       - restore_cache: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run:
-        name: build
-        command: npm run build
+          name: build
+          command: npm run build
 
   deploy:
     docker:
@@ -47,3 +47,6 @@ workflows:
   test:
     jobs:
       - npm_package_install
+      - eleventy:
+          requires:
+            - npm_package_install
