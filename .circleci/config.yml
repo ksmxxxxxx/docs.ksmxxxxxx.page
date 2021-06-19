@@ -47,6 +47,6 @@ workflows:
   test:
     jobs:
       - npm_package_install
-      - eleventy
+      - eleventy:
           requires:
             - npm_package_install
