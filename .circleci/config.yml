@@ -1,40 +1,12 @@
 version: 2.1
 jobs:
-  npm_package_install:
-    docker:
-      - image: circleci/node:12
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-            - node-v1-{{ .Branch }}-
-            - node-v1-
-      - run:
-          name: install
-          command: npm install
-      - save_cache:
-          paths:
-            - "node_modules"
-          key: node-v1-{{ .branch }}-{{ checksum "package-lock.json" }}
-  eleventy:
-    docker:
-      - image: circleci/node:12
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - run:
-          name: build
-          command: npm run build
 
   deploy_preview:
     docker:
       - image: circleci/node:12
+
     steps:
       - checkout
-
       - restore_cache:
           keys:
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
@@ -58,8 +30,41 @@ jobs:
           name: preview_deploy
           command: npx netlify deploy -d _site -a ${NETLIFY_AUTH_TOKEN} -s ${NETLIFY_SITE_ID}
 
+  deploy_production:
+    docker:
+      - image: circleci/node:12
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - node-v1-{{ .Branch }}-
+            - node-v1-
+
+      - run:
+          name: npm packages install
+          command: npm install
+
+      - save_cache:
+          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - "node_modules"
+
+      - run:
+          name: eleventy build
+          command: npm run build
+
+      - run:
+          name: preview_deploy
+          command: npx netlify deploy -p -d _site -a ${NETLIFY_AUTH_TOKEN} -s ${NETLIFY_SITE_ID}
+
 workflows:
   version: 2.1
   build:
     jobs:
       - deploy_preview
+      - deploy_production:
+          filters:
+            branches:
+              only: main
