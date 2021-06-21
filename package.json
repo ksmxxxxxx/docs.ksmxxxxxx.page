@@ -4,8 +4,8 @@
   "description": "Not yet",
   "main": "index.js",
   "scripts": {
-    "dev": "eleventy --serve",
-    "build": "eleventy",
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
