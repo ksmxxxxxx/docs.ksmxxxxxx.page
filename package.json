@@ -1,10 +1,11 @@
 {
-  "name": "blog.ksmxxxxxx.page",
+  "name": "docs.ksmxxxxxx.page",
   "version": "1.0.0",
   "description": "Not yet",
   "main": "index.js",
   "scripts": {
-    "dev": "eleventy --serve",
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,9 +23,10 @@
     "@11ty/eleventy": "^0.12.1",
     "bulma": "^0.9.2",
     "eleventy-plugin-sass": "^1.2.0",
-    "eslint": "^7.27.0",
+    "eslint": "^7.28.0",
     "eslint-config-standard": "^16.0.3",
     "luxon": "^1.27.0",
+    "netlify-cli": "^3.37.37",
     "pug": "^3.0.2"
   }
 }
