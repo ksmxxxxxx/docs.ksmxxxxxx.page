@@ -25,7 +25,7 @@
     "eleventy-plugin-sass": "^1.2.0",
     "eslint": "^7.29.0",
     "eslint-config-standard": "^16.0.3",
-    "luxon": "^1.27.0",
+    "luxon": "^2.0.1",
     "netlify-cli": "^3.39.1",
     "pug": "^3.0.2"
   }
