@@ -6,6 +6,7 @@ tags: [
   'sample'
 ]
 title: Markdown記法のサンプル用記事
+description: サンプル記事ですよ
 ---
 
 This is an example note.
