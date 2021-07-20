@@ -5,31 +5,34 @@ if title
   meta(proparty='og:site_name' content=site.title)
   meta(proparty='og:title' content=title)
   meta(property='og:type' content='article')
+  meta(property='og:url' content=`${site.url}${page.url}`)
 else
-  meta(proparty='og:title' content=site.title)
+  meta(proparty='og:site_title' content=site.title)
   meta(property='og:type' content='website')
+  meta(property='og:url' content=site.url)
 
 if description
   meta(property='og:description' content=description)
 else
   meta(property='og:description' content=site.description)
 
-meta(property='og:url' content=page.url)
-meta(property='og:image' content='images/ogp_twitter.png')
+meta(property='og:image' content=`${site.url}/images/ogp_twitter.png`)
 
-meta(name='twitter:card' content='summary')
+meta(property='twitter:card' content='summary')
 if title
-  meta(name='twitter:title' content=title)
+  meta(property='twitter:title' content=title)
+  meta(property='twitter:url' content=`${site.url}${page.url}`)
 else
-  meta(name='twitter:title' content=site.title)
+  meta(property='twitter:title' content=site.title)
+  meta(property='twitter:url' content=site.url)
 
 if description
-  meta(name='twitter:description' content=description)
+  meta(property='twitter:description' content=description)
 else
-  meta(name='twitter:description' content=site.description)
-meta(name='twitter:site' content=site.author.twitterid)
-meta(name='twitter:image' content='images/avatar_ksm-min.png')
-meta(name='twitter:image:alt' content="Author's avater image")
+  meta(property='twitter:description' content=site.description)
+meta(property='twitter:site' content=site.author.twitterid)
+meta(property='twitter:image' content=`${site.url}/images/avatar_ksm-min.png`)
+meta(property='twitter:image:alt' content="Author's avater image")
 
 title
   if title
