@@ -13,11 +13,20 @@
 @import 'recently_posts_list'
 @import 'aboutme'
 
+// override bulma
+.content
+  p
+    text-align: justify
+    &:not(:last-child)
+      margin-bottom: 1.5rem
+
 .page
   section
     padding-bottom: 3rem
+
   section:last-child
     padding-bottom: 0
+
   h2
     @extend %title-serif
     text-align: center
@@ -28,14 +37,19 @@
   header
     border-bottom: 4px solid $color-yellow
     margin-bottom: 3rem
+
     h1
       @extend %title-serif
+
     time
       display: block
       padding-bottom: .5rem
       text-align: right
       font-size: $size-7
       color: $color-very-dark-grayish-blue
+
+  .description_of_post
+    padding-bottom: 3rem
 
 @media (min-width: $tablet_and_laptop)
   .page, .post
