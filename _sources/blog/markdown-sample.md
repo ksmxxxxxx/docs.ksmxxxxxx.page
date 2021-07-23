@@ -1,5 +1,4 @@
 ---
-layout: layouts/blog
 tags: [
   'post',
   'markdown',

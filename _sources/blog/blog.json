@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/blog",
+  "permalink": "{{ page.filePathStem }}.html"
+}
