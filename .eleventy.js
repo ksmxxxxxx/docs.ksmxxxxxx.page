@@ -30,7 +30,6 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: '_sources',
       data: '_data'
-    },
-    markdownTemplateEngine: 'md'
+    }
   }
 }
