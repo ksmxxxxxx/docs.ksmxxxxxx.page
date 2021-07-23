@@ -8,5 +8,8 @@ section.post
     time(datetime=filters.htmlDateString(page.date))
       = filters.readableDate(page.date)
 
+  .description_of_post
+    p=description
+
   article.content
     | !{content}
