@@ -6,7 +6,7 @@ section.page
   section
     h2 Recently
     ul.recently-posts-list
-      each item in collections.post.reverse()
+      each item in collections.articles.reverse()
         li
           time(datetime=filters.htmlDateString(item.date))
             = filters.readableDate(item.date)
