@@ -10,6 +10,16 @@ description: 自分の振り返りも兼ねて、自分の得意なことや苦�
 date: 2021-10-12 23:00:00+00:00
 ---
 
+# 2021年12月15日追記
+
+2022年1月か2022年2月から業務委託、週3日稼働で仕事を募集しています。
+
+経歴スキル等については以下をご参照ください。
+
+- [Wantedly](https://www.wantedly.com/id/ksmxxxxxx)
+- [GitHub](https://github.com/ksmxxxxxx)
+- [ksmxxxxxx\.hatebu](https://ksmxxxxxx.hatenablog.com/)
+
 # 経歴
 
 ## 2002年〜2004年
