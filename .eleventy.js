@@ -18,7 +18,7 @@ module.exports = function (eleventyConfig) {
     filters: global.filters
   })
 
-  Settings.defaultZoneName = 'Asia/Tokyo'
+  Settings.defaultZone = 'Asia/Tokyo'
   eleventyConfig.addFilter('htmlDateString', dateObj => DateTime.fromJSDate(dateObj).toISO())
   eleventyConfig.addFilter('readableDate', dataObj => DateTime.fromJSDate(dataObj).toFormat('yyyy年MM月dd日 HH時mm分'))
   eleventyConfig.addCollection('articles', collection => collection.getFilteredByGlob('**/articles/*.md'))
