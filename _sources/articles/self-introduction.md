@@ -157,13 +157,3 @@ Railsのビューの実装から、CSSフレームワーク(Bootstrap)のアッ�
 # 🍙
 
 もし「話してみたい」、「カジュアル面談してみたい」という方がおられましたら、[Twitter](https://twitter.com/ksmxxxxxx)でご連絡ください。
-
-## 2021年12月15日追記
-
-週3日稼働で仕事を募集しています。
-
-経歴スキル等については以下をご参照ください。
-
-- [Wantedly](https://www.wantedly.com/id/ksmxxxxxx)
-- [GitHub](https://github.com/ksmxxxxxx)
-- [ksmxxxxxx\.hatebu](https://ksmxxxxxx.hatenablog.com/)
