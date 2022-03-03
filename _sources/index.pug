@@ -14,6 +14,16 @@ section.page
             = item.data.title
 
   section
+    h2 Hatena Blog Articles
+    ul.recently-posts-list
+      each hatenaEntry in hatenaBlogEntryItems
+        li 
+          time(datetime=hatenaEntry.htmldate)
+            | #{hatenaEntry.displaydate}
+          a(href=hatenaEntry.href target='_blank')
+            | #{hatenaEntry.title}
+
+  section
     h2 Adout me
     .aboutme
       figure
