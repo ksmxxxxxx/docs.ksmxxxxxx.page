@@ -1,10 +1,10 @@
-name: Deploy to prduction
+name: Get Hatena Blog Entries
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    -cron: '0 * * * *'
+
 jobs:
-  deploy_to_production:
+  get_hatena_api_schedule:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
