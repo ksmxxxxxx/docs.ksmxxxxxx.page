@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
+    "hatena": "node ./createHatenaBlogEntryList.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
