@@ -1,9 +1,9 @@
-name: Deploy to preview
+name: Get Hatena Blog Entries
 on:
   schedule:
     branches-ignore:
       - 'dependabot/**'
-    - cron: '50 17 * * *'
+    - cron: '00 09 * * *'
 jobs:
   get_hatena_blog_entries:
     runs-on: ubuntu-latest
