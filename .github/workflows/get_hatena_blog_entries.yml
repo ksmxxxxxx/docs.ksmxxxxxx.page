@@ -1,0 +1,36 @@
+name: Deploy to preview
+on:
+  schedule:
+    branches-ignore:
+      - 'dependabot/**'
+    - cron: '50 17 * * *'
+jobs:
+  get_hatena_blog_entries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Caching packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: npm-${{ hashFiles('package-lock.json') }}
+          restore-keys: npm-
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run hatena API fetch
+        run: npm run hatena
+
+      - name: Build with 11ty
+        run: npm run build
+
+      - name: Deploy to preview
+        run: npx netlify deploy -d _site -a ${NETLIFY_AUTH_TOKEN} -s ${NETLIFY_SITE_ID}
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
