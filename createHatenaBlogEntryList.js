@@ -48,8 +48,9 @@ async function createHatenaBlogEntryListFile () {
   const url = 'https://blog.hatena.ne.jp/ksmxxxxxx/ksmxxxxxx.hatenablog.com/atom/entry'
   const hatenaXml = await getHatenaBlogEntryXmlData(url)
   const parse2json = await parseXml2Json(hatenaXml)
-  const hatenaBlogEntryItems = extractBlogEntry(parse2json)
+  const hatenaBlogEntryItems = await extractBlogEntry(parse2json)
   fs.writeFileSync('./_sources/_data/hatenaBlogEntryItems.json', JSON.stringify(hatenaBlogEntryItems, null, '  '))
+  process.stdout.write('\n 🎉 Done!')
 }
 
 createHatenaBlogEntryListFile()
