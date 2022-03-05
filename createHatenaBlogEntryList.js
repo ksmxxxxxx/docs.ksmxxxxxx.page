@@ -33,17 +33,15 @@ function extractBlogEntry (data) {
   const extractData = []
   for (const e of data) {
     if (e['app:control'][0]['app:draft'][0] === 'yes') continue
-    while (extractData.length < 5) {
-      const item = {
-        date: DateTime.fromISO(e.published.join('').toString()).toFormat('yyyy年MM月dd日 HH時mm分'),
-        title: e.title.join('').toString(),
-        href: e.link[1].$.href,
-        draft: e['app:control'][0]['app:draft'][0]
-      }
-      extractData.push(item)
+    const item = {
+      htmldate: e.published.join('').toString(),
+      displaydate: DateTime.fromISO(e.published.join('').toString()).toFormat('yyyy年MM月dd日 HH時mm分'),
+      title: e.title.join('').toString(),
+      href: e.link[1].$.href
     }
+    extractData.push(item)
   }
-  return extractData
+  return extractData.slice(0, 5)
 }
 
 async function createHatenaBlogEntryListFile () {
@@ -51,7 +49,7 @@ async function createHatenaBlogEntryListFile () {
   const hatenaXml = await getHatenaBlogEntryXmlData(url)
   const parse2json = await parseXml2Json(hatenaXml)
   const hatenaBlogEntryItems = extractBlogEntry(parse2json)
-  fs.writeFileSync('./hatenaBlogEntryItems.json', JSON.stringify(hatenaBlogEntryItems, null, '  '))
+  fs.writeFileSync('./_sources/_data/hatenaBlogEntryItems.json', JSON.stringify(hatenaBlogEntryItems, null, '  '))
 }
 
 createHatenaBlogEntryListFile()
