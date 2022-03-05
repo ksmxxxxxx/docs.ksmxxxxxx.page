@@ -22,6 +22,12 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Get hatena blog entries
+        run: npm run hatena
+        env:
+          HATENA_NAME: ${{secrets.HATENA_NAME}}
+          HATENA_PASS: ${{secrets.HATENA_PASS}}
+
       - name: Build with 11ty
         run: npm run build
 
