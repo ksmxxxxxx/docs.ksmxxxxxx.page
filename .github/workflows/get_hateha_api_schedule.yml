@@ -1,7 +1,7 @@
 name: Get Hatena Blog Entries
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 12,21 * * *'
 
 jobs:
   get_hatena_api_schedule:
