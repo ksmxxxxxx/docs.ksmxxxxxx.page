@@ -1,11 +1,23 @@
 const { Settings, DateTime } = require('luxon')
 const eleventySass = require('eleventy-sass')
 const pug = require('pug')
+const markdownIt = require('markdown-it')
+const markdownItFootnote = require('markdown-it-footnote')
+
 
 module.exports = function (eleventyConfig) {
+  let markdownLibrary = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true,
+    typographer: true,
+  })
+    .use(markdownItFootnote)
+
   global.filters = eleventyConfig.javascriptFunctions
   eleventyConfig.addPlugin(eleventySass)
   eleventyConfig.addPassthroughCopy('_sources/images')
+  eleventyConfig.setLibrary('md', markdownLibrary)
   eleventyConfig.setLibrary('pug', pug)
 
   eleventyConfig.setPugOptions({
