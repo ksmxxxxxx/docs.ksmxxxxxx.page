@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "no-exclamation-question-mark": false,
+      "ja-no-weak-phrase": false,
+      "ja-no-successive-word": {
+        "allowOnomatopee": true,
+        "allow": ["…"]
+      }
+    },
+    "preset-japanese": true
+  },
+  "filters": {
+    "comments": true
+  }
+}
