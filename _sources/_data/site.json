@@ -2,10 +2,12 @@
   "title": "docs.ksmxxxxxx.page",
   "url": "https://docs.ksmxxxxxx.page",
   "description": "ksmの自己紹介とポエム置き場です",
+  "language": "ja",
   "author": {
     "name": "ksm",
     "twitter": "https://twitter.com/ksmxxxxxx",
     "twitterid": "@ksmxxxxxx",
+    "email": "kankichi69@gmail.com",
     "hatebu": "https://ksmxxxxxx.hatenablog.com",
     "github": "https://github.com/ksmxxxxxx"
   }
