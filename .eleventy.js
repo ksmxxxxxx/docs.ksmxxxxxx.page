@@ -3,6 +3,7 @@ const eleventySass = require('eleventy-sass')
 const pug = require('pug')
 const markdownIt = require('markdown-it')
 const markdownItFootnote = require('markdown-it-footnote')
+const pluginRss = require("@11ty/eleventy-plugin-rss")
 
 
 module.exports = function (eleventyConfig) {
@@ -28,6 +29,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('htmlDateString', dateObj => DateTime.fromJSDate(dateObj).toISO())
   eleventyConfig.addFilter('readableDate', dataObj => DateTime.fromJSDate(dataObj).toFormat('yyyy年MM月dd日 HH時mm分'))
   eleventyConfig.addCollection('articles', collection => collection.getFilteredByGlob('**/articles/*.md'))
+
+  eleventyConfig.addPlugin(pluginRss)
 
   return {
     dir: {
