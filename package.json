@@ -27,7 +27,7 @@
     "bulma": "^0.9.4",
     "dotenv": "^16.0.3",
     "eleventy-sass": "^2.2.1",
-    "eslint": "^8.40.0",
+    "eslint": "^8.41.0",
     "eslint-config-standard": "^17.0.0",
     "luxon": "^3.2.1",
     "netlify-cli": "^15.0.0",
