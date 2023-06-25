@@ -5,8 +5,21 @@
   "language": "ja",
   "author": {
     "name": "ksm",
-    "twitter": "https://twitter.com/ksmxxxxxx",
-    "twitterid": "@ksmxxxxxx",
+    "sns": {
+      "twitter": {
+        "id": "@ksmxxxxxx",
+        "url": "https://twitter.com/ksmxxxxxx"
+      },
+      "mstdnJp": {
+        "id": "@ksmxxxxxx@mstdn.jp",
+        "url": "https://mstdn.jp/@ksmxxxxxx"
+      },
+      "misskeySystems": {
+        "id": "@ksmxxxxxx@misskey.systems",
+        "rss": "misskey.systems/@ksmxxxxxx.atom",
+        "url": "https://misskey.systems/@ksmxxxxxx"
+      }
+    },
     "email": "kankichi69@gmail.com",
     "hatebu": "https://ksmxxxxxx.hatenablog.com",
     "github": "https://github.com/ksmxxxxxx"
