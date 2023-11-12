@@ -42,7 +42,7 @@
     "textlint-rule-ja-no-successive-word": "^2.0.1",
     "textlint-rule-no-doubled-joshi": "^4.0.3",
     "textlint-rule-no-dropping-the-ra": "^3.0.0",
-    "textlint-rule-preset-ja-technical-writing": "^7.0.0",
+    "textlint-rule-preset-ja-technical-writing": "^8.0.0",
     "textlint-rule-preset-japanese": "^7.0.0"
   }
 }
