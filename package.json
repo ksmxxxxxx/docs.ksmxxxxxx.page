@@ -30,13 +30,13 @@
     "eslint": "^8.52.0",
     "eslint-config-standard": "^17.1.0",
     "luxon": "^3.3.0",
-    "netlify-cli": "^15.0.0",
     "pug": "^3.0.2",
     "xml2js": "^0.6.2"
   },
   "dependencies": {
     "@textlint-ja/textlint-rule-no-insert-dropping-sa": "^2.0.1",
     "markdown-it-footnote": "^3.0.3",
+    "netlify-cli": "^17.2.2",
     "textlint": "^13.4.0",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-ja-no-successive-word": "^2.0.1",
