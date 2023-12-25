@@ -1,11 +1,16 @@
 {
   "rules": {
     "preset-ja-technical-writing": {
+      "sentence-length": {
+        "skipUrlStringLinkk": true
+      },
       "no-exclamation-question-mark": false,
       "ja-no-weak-phrase": false,
       "ja-no-successive-word": {
         "allowOnomatopee": true,
-        "allow": ["…"]
+        "allow": [
+          "…"
+        ]
       }
     },
     "preset-japanese": true
