@@ -33,6 +33,7 @@ module.exports = function (eleventyConfig) {
   global.filters = eleventyConfig.javascriptFunctions
   eleventyConfig.addPlugin(eleventySass)
   eleventyConfig.addPassthroughCopy('_sources/images')
+  eleventyConfig.addPassthroughCopy('_sources/_redirects')
   eleventyConfig.setLibrary('pug', pug)
   eleventyConfig.setLibrary('liquid', new Liquid(liquidOptions))
   eleventyConfig.setLibrary('md',
