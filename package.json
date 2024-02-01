@@ -46,6 +46,6 @@
     "textlint-rule-no-doubled-joshi": "^5.1.0",
     "textlint-rule-no-dropping-the-ra": "^3.0.0",
     "textlint-rule-preset-ja-technical-writing": "^9.0.0",
-    "textlint-rule-preset-japanese": "^9.0.0"
+    "textlint-rule-preset-japanese": "^10.0.3"
   }
 }
