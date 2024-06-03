@@ -24,7 +24,7 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "axios": "^1.7.2",
-    "bulma": "^0.9.4",
+    "bulma": "^1.0.1",
     "dotenv": "^16.4.5",
     "eleventy-sass": "^2.2.4",
     "eslint": "^8.57.0",
