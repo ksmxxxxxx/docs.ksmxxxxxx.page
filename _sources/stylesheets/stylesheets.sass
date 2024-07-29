@@ -1,18 +1,22 @@
 @charset 'utf-8'
-@import 'override_bulma'
-@import '../../node_modules/bulma/bulma'
+@use "sass:meta"
+@use 'sass:list'
+@use 'override_bulma'
+@use '../../node_modules/bulma/bulma'
+@use '../../node_modules/bulma/sass/utilities/derived-variables.scss' as *
+@use '../../node_modules/bulma/sass/utilities/initial-variables.scss' as *
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap')
 
-@import 'extend'
+@include meta.load-css('extend')
 
-@import 'root_elements'
-@import 'root_header'
-@import 'root_footer'
-@import 'recently_posts_list'
-@import 'aboutme'
-@import 'twitter_tweet'
+@include meta.load-css('root_elements')
+@include meta.load-css('root_header')
+@include meta.load-css('root_footer')
+@include meta.load-css('recently_posts_list')
+@include meta.load-css('aboutme')
+@include meta.load-css('twitter_tweet')
 
 // override bulma
 .content
@@ -31,12 +35,12 @@
   h2
     @extend %title-serif
     text-align: center
-    @media (min-width: $tablet_and_laptop)
+    @media (min-width: override_bulma.$tablet_and_laptop)
       text-align: left
 
 .post
   header
-    border-bottom: 4px solid $color-yellow
+    border-bottom: 4px solid override_bulma.$color-yellow
     margin-bottom: 3rem
 
     h1
@@ -46,8 +50,8 @@
       display: block
       padding-bottom: .5rem
       text-align: right
-      font-size: $size-7
-      color: $color-very-dark-grayish-blue
+      font-size: list.nth($sizes, 7)
+      color: override_bulma.$color-very-dark-grayish-blue
 
   .description_of_post
     padding-bottom: 3rem
@@ -64,7 +68,7 @@
       margin-bottom: .5rem
       border-bottom: $grey-lighter solid 1px
 
-@media (min-width: $tablet_and_laptop)
+@media (min-width: override_bulma.$tablet_and_laptop)
   .page, .post
     max-width: 48rem
     margin-right: auto
