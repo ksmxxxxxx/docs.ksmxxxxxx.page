@@ -1,3 +1,5 @@
+@use "override_bulma"
+
 body
   font-feature-settings: "pkna"
 
@@ -8,10 +10,10 @@ html::before,html::after,body::before,body::after
   z-index: 7
 
 html:before, html:after
-  background: linear-gradient(200deg, #0fa, $color-yellow)
+  background: linear-gradient(200deg, #0fa, override_bulma.$color-yellow)
 
 body::before, body::after
-  background: linear-gradient(45deg, #0fa, $color-yellow)
+  background: linear-gradient(45deg, #0fa, override_bulma.$color-yellow)
 
 html::before
   height: 10px

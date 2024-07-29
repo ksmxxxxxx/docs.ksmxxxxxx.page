@@ -1,3 +1,5 @@
+@use "override_bulma"
+
 .aboutme
   dl
     display: flex
@@ -16,7 +18,7 @@
       height: 100%
       border-radius: 50%
 
-  @media (min-width: $tablet_and_laptop)
+  @media (min-width: override_bulma.$tablet_and_laptop)
     display: flex
     flex-direction: row
     justify-content: flex-start

@@ -1,12 +1,16 @@
+@use "../../node_modules/bulma/sass/utilities/derived-variables.scss" as *
+@use "override_bulma"
+@use "sass:list"
+
 .root_header
   h1
     margin-top: .625rem
     padding: 1rem 0
     text-align: center
-    font-size: nth($sizes, 6)
+    font-size: list.nth($sizes, 6)
     font-family: 'Rubik', Helvetica, sans-serif
     a
-      color: $text
+      color: override_bulma.$text
       transition: cubic-bezier(0.47, 0, 0.75, 0.72) .5s color
       &:hover
-        color: $link
+        color: override_bulma.$link
