@@ -5,24 +5,27 @@
   "language": "ja",
   "author": {
     "name": "ksm",
-    "sns": {
-      "twitter": {
+    "job": "Designer",
+    "sns": [
+      {
+        "name": "Twitter",
         "id": "@ksmxxxxxx",
         "url": "https://twitter.com/ksmxxxxxx"
       },
-      "mstdnJp": {
+      {
+        "name": "Fedibird.com",
         "id": "@ksmxxxxxx@fedibird.com",
         "url": "https://fedibird.com/@ksmxxxxxx"
       },
-      "misskeySystems": {
+      {
+        "name": "みすてむず",
         "id": "@ksmxxxxxx@misskey.systems",
         "rss": "misskey.systems/@ksmxxxxxx.atom",
         "url": "https://misskey.systems/@ksmxxxxxx"
       }
-    },
+    ],
     "email": "kankichi69@gmail.com",
     "hatebu": "https://ksmxxxxxx.hatenablog.com",
     "github": "https://github.com/ksmxxxxxx"
   }
 }
-
