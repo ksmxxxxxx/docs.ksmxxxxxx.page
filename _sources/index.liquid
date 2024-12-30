@@ -1,0 +1,73 @@
+---
+layout: layouts/base
+---
+
+<section class="page">
+  <section>
+    <h2>Recently</h2>
+    {{ typeof collections.articles}}
+    <ul>
+      {% for item in collections.articles reversed %}
+      <li>
+        <time datatime="{{ item.date | htmlDateString }}">
+          {{ item.date | readableDate }}
+        </time>
+        <a href="{{ item.url }}">
+          {{ item.data.title }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Hatena Blog Articles</h2>
+    <ul>
+      {% for item in hatenaBlogEntryItems %}
+      <li>
+        <time datetime="{{ item.htmldate }}">
+          {{ item.displaydate }}
+        </time>
+        <a href="{{ item.href }}" target="_blank">
+          {{ item.title }}
+        </a>
+      </li>
+      {%endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>About me</h2>
+    <div class="aboutme">
+      <figure>
+        <img src="images/avatar_ksm-min.png" alt="ブログ主の近影画像">
+      </figure>
+      <div>
+        <dl>
+          <dt>Name</dt>
+          <dd>{{ site.author.name }}</dd>
+        </dl>
+        <dl>
+          <dt>Job</dt>
+          <dd>{{ site.author.job }}</dd>
+        </dl>
+        <dl>
+          <dt>SNS</dt>
+          <dd>
+            {{site.author.sns.twitter}}
+            <ul>
+              {% for item in site.author.sns %}
+              <li>
+                <a href="{{ item.url }}" target="_blank">
+                  {{ item.name }} {{ item.id }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</section>
