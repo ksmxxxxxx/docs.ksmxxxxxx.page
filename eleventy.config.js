@@ -28,7 +28,7 @@ export default function (eleventyConfig) {
     extname: '.liquid',
     dynamicPartials: false,
     staticFilters: false,
-    root: ['_includes']
+    root: ['_sources/_includes']
   }
 
   eleventyConfig.addPlugin(pugPlugin, {
