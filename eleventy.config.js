@@ -1,7 +1,5 @@
 import { Settings, DateTime } from 'luxon'
-import PluginSass from 'eleventy-sass'
 import UpgradeHelper from '@11ty/eleventy-upgrade-help'
-import pugPlugin from '@11ty/eleventy-plugin-pug'
 import { Liquid } from 'liquidjs'
 import markdownIt from 'markdown-it'
 import markdownItAnchor from 'markdown-it-anchor'
@@ -31,12 +29,7 @@ export default function (eleventyConfig) {
     root: ['_sources/_includes']
   }
 
-  eleventyConfig.addPlugin(pugPlugin, {
-    filters: global.filters
-  })
-
   eleventyConfig.addPlugin(UpgradeHelper)
-  eleventyConfig.addPlugin(PluginSass)
 
   eleventyConfig.addPlugin(pluginRss)
   eleventyConfig.addPlugin(pluginTOC, {
