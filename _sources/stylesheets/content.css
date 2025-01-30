@@ -1,0 +1,21 @@
+.content h1 {
+  margin-bottom: 1rem;
+}
+.content h2 {
+  margin-block-start: calc((32 / 16) * 1rem);
+  margin-block-end: calc((16 / 16) * 1rem);
+}
+.content p {
+  line-height: 1.8;
+}
+
+.content blockquote {
+  margin-inline-start: 0;
+  margin-block-start: calc((24 / 16) * 1rem);
+  margin-block-end: calc((24 / 16) * 1rem);
+  padding-inline-start: calc((40 / 16) * 1rem);
+  padding-block-start: calc((1 / 16) * 1rem);
+  padding-block-end: calc((1 / 16) * 1rem);
+  border-left: 4px rgb(var(--main-color) / 0.3) solid;
+  font-family: Noto serif, serif;
+}

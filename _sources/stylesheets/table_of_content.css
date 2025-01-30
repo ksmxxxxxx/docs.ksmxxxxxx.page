@@ -1,0 +1,17 @@
+.table_of_content {
+  border-block-start: solid 1px rgb(var(--main-color) / 0.5);
+  border-block-end: solid 1px rgb(var(--main-color) / 0.5);
+  padding: 1rem;
+  margin-block-start: calc((24 / 16) * 1rem);
+  margin-block-end: calc((24 / 16) * 1rem);
+}
+
+.table_of_content h2 {
+  margin: 0;
+  font-size: calc((24 / 16) * 1rem);
+  font-family: Noto serif, serif;
+}
+
+.table_of_content ul {
+  margin-block-end: 0;
+}
