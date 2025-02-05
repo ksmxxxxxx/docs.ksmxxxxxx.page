@@ -1,0 +1,21 @@
+.page section {
+  padding-block-end: calc((48 / 16) * 1rem);
+}
+
+.page section:last-child {
+  padding-block-end: 0;
+}
+
+.page h2 {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 900;
+}
+
+.page ul {
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+.page time {
+  padding-inline-end: calc((4 / 16) * 1rem);
+}

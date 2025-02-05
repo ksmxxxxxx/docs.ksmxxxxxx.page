@@ -3,7 +3,7 @@ layout: layouts/base
 ---
 
 <section class="page">
-  <section>
+  <section class="recently-posts-list">
     <h2>Recently</h2>
     {{ typeof collections.articles}}
     <ul>
@@ -20,7 +20,7 @@ layout: layouts/base
     </ul>
   </section>
 
-  <section>
+  <section class="recently-posts-list">
     <h2>Hatena Blog Articles</h2>
     <ul>
       {% for item in hatenaBlogEntryItems %}
@@ -37,35 +37,37 @@ layout: layouts/base
   </section>
 
   <section>
-    <h2>About me</h2>
     <div class="aboutme">
-      <figure>
-        <img src="images/avatar_ksm-min.png" alt="ブログ主の近影画像">
-      </figure>
-      <div>
-        <dl>
-          <dt>Name</dt>
-          <dd>{{ site.author.name }}</dd>
-        </dl>
-        <dl>
-          <dt>Job</dt>
-          <dd>{{ site.author.job }}</dd>
-        </dl>
-        <dl>
-          <dt>SNS</dt>
-          <dd>
-            {{site.author.sns.twitter}}
-            <ul>
-              {% for item in site.author.sns %}
-              <li>
-                <a href="{{ item.url }}" target="_blank">
-                  {{ item.name }} {{ item.id }}
-                </a>
-              </li>
-              {% endfor %}
-            </ul>
-          </dd>
-        </dl>
+      <h2>About me</h2>
+      <div class="aboutme-inner">
+        <figure>
+          <img src="images/avatar_ksm-min.png" alt="ブログ主の近影画像">
+        </figure>
+        <div>
+          <dl>
+            <dt>Name</dt>
+            <dd>{{ site.author.name }}</dd>
+          </dl>
+          <dl>
+            <dt>Job</dt>
+            <dd>{{ site.author.job }}</dd>
+          </dl>
+          <dl>
+            <dt>SNS</dt>
+            <dd>
+              {{site.author.sns.twitter}}
+              <ul>
+                {% for item in site.author.sns %}
+                <li>
+                  <a href="{{ item.url }}" target="_blank">
+                    {{ item.name }} {{ item.id }}
+                  </a>
+                </li>
+                {% endfor %}
+              </ul>
+            </dd>
+          </dl>
+        </div>
       </div>
     </div>
   </section>
