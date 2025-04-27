@@ -33,7 +33,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to preview
-        run: npx netlify deploy -d _site -a ${NETLIFY_AUTH_TOKEN} -s ${NETLIFY_SITE_ID}
+        run: npx netlify deploy --dir=_site --auth ${NETLIFY_AUTH_TOKEN} --site ${NETLIFY_SITE_ID}
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
