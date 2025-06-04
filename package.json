@@ -43,7 +43,7 @@
     "liquid": "^5.1.1",
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-footnote": "^4.0.0",
-    "netlify-cli": "^21.6.0",
+    "netlify-cli": "^20.0.2",
     "textlint": "^14.7.2",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-ja-no-successive-word": "^2.0.1",
