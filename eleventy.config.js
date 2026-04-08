@@ -44,7 +44,7 @@ export default function (eleventyConfig) {
   );
 
   eleventyConfig.addFilter("readableDate", (dataObj) =>
-    DateTime.fromJSDate(dataObj).toFormat("yyyy年MM月dd日 HH時mm分")
+    DateTime.fromJSDate(dataObj).toFormat("yyyy年MM月dd日")
   );
 
   eleventyConfig.addPassthroughCopy("_sources/images");
