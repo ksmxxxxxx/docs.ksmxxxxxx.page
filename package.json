@@ -35,7 +35,7 @@
     "xml2js": "^0.6.2"
   },
   "dependencies": {
-    "@11ty/eleventy-upgrade-help": "^3.0.1",
+    "@11ty/eleventy-upgrade-help": "^3.0.2",
     "@textlint-ja/textlint-rule-no-insert-dropping-sa": "^2.0.1",
     "eleventy-plugin-embed-everything": "^1.21.1",
     "eleventy-plugin-toc": "^1.1.5",
